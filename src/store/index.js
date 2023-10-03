@@ -3,12 +3,16 @@ import { createStore } from 'vuex'
 export default createStore({
   state() {
     return {
-      search: ''
+      searchQuery: '',
+      searchCount: null
     }
   },
   mutations: {
-    setSearch(state, query) {
-      state.count = query
+    setSearchQuery(state, query) {
+      state.searchQuery = query
+    },
+    setSearchCount(state, count) {
+      state.searchCount = count
     }
   }
 })
